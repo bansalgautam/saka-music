@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 import Social from "../Social";
 import EmailIcon from "@mui/icons-material/Email";
 
-export default function AboutComp({ title, about, className, dataAOS }) {
+export default function AboutComp({ title, about, className, dataAOS, src }) {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,11 +21,11 @@ export default function AboutComp({ title, about, className, dataAOS }) {
       {/* <h1 className="pb-4 font-bold text-xl text-[#d6a646]">ABOUT</h1> */}
       <div className="bg-gradient-to-br from-white to-slate-400 rounded-xl max-w-[400px] max-h-[350px] overflow-hidden">
         <Image
-          src="/dhiman.png"
+          src={src}
           width={400}
           height={265.05}
           alt="profile"
-          className="transition duration-[2000] pl-4"
+          className="transition duration-[2000]"
           data-aos="fade-up"
         />
       </div>
@@ -36,7 +36,7 @@ export default function AboutComp({ title, about, className, dataAOS }) {
         <div className="flex flex-col items-center gap-2 pt-4 text-sm">
           <div className="text-justify">{about}</div>
           <div className="flex text-[#ffd700] text-md pb-4 pt-1 items-center gap-1">
-            <EmailIcon fontSize="small"/>
+            <EmailIcon fontSize="small" />
             <Link href="mailto:visionrollfilms@gmail.com">
               <div>visionrollfilms@gmail.com</div>
             </Link>
