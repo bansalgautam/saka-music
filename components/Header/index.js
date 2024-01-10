@@ -12,9 +12,9 @@ export default function Header() {
   const selected = "text-[#ffd700]";
   return (
     <div className="bg-black w-full fixed top-0 z-10">
-      <div className="grid grid-cols-3 w-full max-w-[1440px] px-2 mx-auto text-white select-none items-center py-2">
+      <div className="grid lg:grid-cols-3 grid-cols-2 w-full max-w-[1440px] px-2 mx-auto text-white select-none items-center py-2">
         <h1 className="text-2xl font-bold text-[#ffd700]"><Link href="/">LOGO</Link></h1>
-        <h1 className="font-extrabold text-[#ffd700] justify-self-center text-center">
+        <h1 className="font-extrabold text-[#ffd700] justify-self-center text-center hidden lg:block">
           SAKA MUSIC
         </h1>
         <div className="hidden lg:flex gap-8 justify-self-end">
