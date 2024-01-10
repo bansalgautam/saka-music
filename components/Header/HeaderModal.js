@@ -2,6 +2,7 @@
 
 import { Modal, ModalContent, ModalHeader, ModalBody } from "@nextui-org/react";
 import Link from "next/link";
+import Social from "../Social";
 
 export default function HeaderModal({ isOpen, onOpenChange, pathname }) {
   const selected = "text-[#ffd700]";
@@ -35,6 +36,9 @@ export default function HeaderModal({ isOpen, onOpenChange, pathname }) {
                   className={`text-md ${pathname === "/contact" && selected}`}
                 >
                   <Link href="/contact">Contact</Link>
+                </div>
+                <div>
+                  <Social fontSize="small"/>
                 </div>
               </ModalBody>
             </>
